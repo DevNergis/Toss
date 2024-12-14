@@ -629,6 +629,20 @@
 
       checkURLParams();
 
+      function checkHashParams() {
+        const hash = window.location.hash.substring(1);
+        const amount = parseInt(hash);
+        if (!isNaN(amount) && amount > 0) {
+          currentAmount = amount.toString();
+          updateDisplay();
+          setTimeout(() => {
+            document.querySelector(".send").click();
+          }, 500);
+        }
+      }
+
+      checkHashParams();
+
       document
         .querySelector(".send")
         .addEventListener("click", () => openTossApp("send"));
