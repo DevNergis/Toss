@@ -494,19 +494,16 @@
     </div>
 
     <script>
-      // 기존 JavaScript 코드는 유지하면서 애니메이션 관련 코드 추가
       let currentAmount = "";
       const amountDisplay = document.querySelector(".amount");
       const wonDisplay = document.querySelector(".won");
 
-      // QR 모달 표시 함수 수정
       function showQRModal(amount) {
         const modal = document.getElementById("qrModal");
         const qrContainer = document.getElementById("qrcode");
         qrContainer.innerHTML = "";
 
         modal.style.display = "flex";
-        // 애니메이션을 위해 지연 추가
         setTimeout(() => {
           modal.classList.add("show");
         }, 10);
@@ -526,7 +523,6 @@
         });
       }
 
-      // QR 모달 닫기 함수 수정
       function closeQRModal() {
         const modal = document.getElementById("qrModal");
         modal.classList.remove("show");
@@ -535,12 +531,10 @@
         }, 300);
       }
 
-      // 키패드 버튼 효과
       document.querySelectorAll(".key").forEach((button) => {
         button.addEventListener("click", () => {
           const value = button.textContent;
 
-          // 리플 효과 추가
           const ripple = document.createElement("div");
           ripple.classList.add("ripple");
           button.appendChild(ripple);
@@ -553,7 +547,6 @@
           } else if (currentAmount.length < 10) {
             currentAmount += value;
           } else {
-            // 최대 길이 초과시 흔들기 효과
             amountDisplay.classList.add("shake");
             setTimeout(() => {
               amountDisplay.classList.remove("shake");
@@ -564,7 +557,6 @@
         });
       });
 
-      // 나머지 JavaScript 코드는 동일하게 유지
       function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
