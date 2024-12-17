@@ -610,17 +610,6 @@
         }
       }
 
-      function checkURLParams() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const amount = urlParams.get("amount");
-        if (amount) {
-          currentAmount = amount;
-          updateDisplay();
-        }
-      }
-
-      checkURLParams();
-
       function checkHashParams() {
         const hash = window.location.hash.substring(1);
         const amount = parseInt(hash);
@@ -638,9 +627,6 @@
       document
         .querySelector(".send")
         .addEventListener("click", () => openTossApp("send"));
-      document
-        .querySelector(".cancel")
-        .addEventListener("click", () => openTossApp("receive"));
 
       function updateDisplay() {
         if (currentAmount === "") {
