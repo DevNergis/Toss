@@ -432,6 +432,58 @@
           animation: slideUp 0.3s ease-out;
         }
       }
+
+      body.dark {
+        background-color: #18171c;
+        color: #ffffff;
+      }
+
+      .container.dark {
+        background: #18171c;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .key.dark {
+        background-color: #18171c;
+        color: #ffffff;
+      }
+
+      .key.dark:hover {
+        background-color: #222128;
+      }
+
+      .action-button.dark {
+        background-color: #18171c;
+        color: #ffffff;
+      }
+
+      .action-button.dark:hover {
+        background-color: #222128;
+      }
+
+      .modal-content.dark,
+      .error-modal-content.dark {
+        background-color: #0f0e11;
+        color: #ffffff;
+      }
+
+      .close-button.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      .close-button.dark:hover {
+        background-color: #444444;
+      }
+
+      .send {
+        background-color: #0081ff;
+        color: #ffffff;
+      }
+
+      .send.dark {
+        background-color: #0081ff;
+      }
     </style>
   </head>
   <body>
@@ -664,6 +716,47 @@
       }
 
       adjustForMobile();
+
+      function toggleTheme() {
+        document.body.classList.toggle("dark");
+        document.querySelector(".container").classList.toggle("dark");
+        document.querySelectorAll(".key").forEach((key) => {
+          key.classList.toggle("dark");
+        });
+        document.querySelectorAll(".action-button").forEach((button) => {
+          button.classList.toggle("dark");
+        });
+        document.querySelectorAll(".modal-content").forEach((modal) => {
+          modal.classList.toggle("dark");
+        });
+        document.querySelectorAll(".close-button").forEach((button) => {
+          button.classList.toggle("dark");
+        });
+      }
+
+      function applyUserThemePreference() {
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (prefersDarkScheme) {
+          document.body.classList.add("dark");
+          document.querySelector(".container").classList.add("dark");
+          document.querySelectorAll(".key").forEach((key) => {
+            key.classList.add("dark");
+          });
+          document.querySelectorAll(".action-button").forEach((button) => {
+            button.classList.add("dark");
+          });
+          document.querySelectorAll(".modal-content").forEach((modal) => {
+            modal.classList.add("dark");
+          });
+          document.querySelectorAll(".close-button").forEach((button) => {
+            button.classList.add("dark");
+          });
+        }
+      }
+
+      //   applyUserThemePreference();
     </script>
   </body>
 </html>
