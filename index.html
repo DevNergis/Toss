@@ -562,6 +562,9 @@
         const modal = document.getElementById("qrModal");
         const qrContainer = document.getElementById("qrcode");
         qrContainer.innerHTML = "";
+        document.getElementsByClassName(
+          "modal-description"
+        )[0].innerHTML = `QR 코드를 스캔하여 모바일에서 ${wonDisplay.innerHTML}을 보내요!`;
 
         modal.style.display = "flex";
         setTimeout(() => {
@@ -713,6 +716,9 @@
         }
 
         wonDisplay.textContent = koreanAmount + "원";
+        if (wonDisplay.textContent == "원") {
+          wonDisplay.textContent = "0원";
+        }
       }
 
       function adjustForMobile() {
