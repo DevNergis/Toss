@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -510,7 +510,7 @@
   </head>
   <body>
     <div id="links">
-      <a href="">
+      <a href="https://github.com/p-asta/toss">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -599,16 +599,15 @@
         const modal = document.getElementById("qrModal");
         const qrContainer = document.getElementById("qrcode");
         qrContainer.innerHTML = "";
-        document.getElementsByClassName(
-          "modal-description"
-        )[0].innerHTML = `QR 코드를 스캔하여 모바일에서 ${wonDisplay.innerHTML}을 보내요!`;
+        document.getElementsByClassName("modal-description")[0].innerHTML =
+          `QR 코드를 스캔하여 모바일에서 ${wonDisplay.innerHTML}을 보내요!`;
 
         modal.style.display = "flex";
         setTimeout(() => {
           modal.classList.add("show");
         }, 10);
         const currentUrl = new URL(
-          `supertoss://send?bank=${BANK}&accountNo=${ACCOUNT_NO}&amount=${amount}`
+          `supertoss://send?bank=${BANK}&accountNo=${ACCOUNT_NO}&amount=${amount}`,
         );
         currentUrl.searchParams.set("amount", amount);
 
@@ -658,7 +657,7 @@
 
       function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
+          navigator.userAgent,
         );
       }
 
@@ -786,7 +785,7 @@
 
       function applyUserThemePreference() {
         const prefersDarkScheme = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
         if (prefersDarkScheme) {
           document.body.classList.add("dark");
