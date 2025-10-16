@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -81,12 +81,12 @@
         position: absolute;
         right: 20px;
         top: 20px;
-        background-color: #fff;
+        background-color: #334155;
         padding: 4px;
         border-radius: 4px;
         a {
           display: block;
-          color: #0f0e11;
+          color: #cbd5e1;
           width: 24px !important;
           height: 24px !important;
         }
@@ -97,18 +97,20 @@
         align-items: center;
         height: 100dvh;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        background-color: #f5f5f5;
+        font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #0f172a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       .container {
         width: 100%;
         max-width: 400px;
-        background: white;
+        background: #1e293b;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         animation: scaleIn 0.5s ease-out;
         overflow: hidden;
       }
@@ -126,7 +128,7 @@
         border: none;
         background: none;
         font-size: 24px;
-        color: #333;
+        color: #cbd5e1;
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -140,6 +142,7 @@
       .title {
         font-size: 18px;
         font-weight: 500;
+        color: #f8fafc;
       }
 
       .amount-display {
@@ -152,11 +155,12 @@
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 5px;
+        color: #f8fafc;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .won {
-        color: #666;
+        color: #94a3b8;
         font-size: 14px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
@@ -170,8 +174,9 @@
       }
 
       .key {
-        background: none;
+        background: #334155;
         border: none;
+        color: #f8fafc;
         font-size: 24px;
         padding: 15px;
         cursor: pointer;
@@ -182,7 +187,7 @@
       }
 
       .key:hover {
-        background-color: #f5f5f5;
+        background-color: #475569;
         transform: translateY(-2px);
       }
 
@@ -229,13 +234,14 @@
       }
 
       .cancel {
-        background-color: #f0f0f0;
-        color: #333;
+        background-color: #334155;
+        color: #f8fafc;
       }
 
       .send {
-        background-color: #4285f4;
-        color: white;
+        background-color: #aaaaff;
+        color: #0f172a;
+        font-weight: 600;
       }
 
       .action-button:hover {
@@ -268,7 +274,7 @@
       }
 
       .modal-content {
-        background-color: white;
+        background-color: #1e293b;
         padding: 30px;
         border-radius: 20px;
         text-align: center;
@@ -303,10 +309,11 @@
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 10px;
+        color: #f8fafc;
       }
 
       .modal-description {
-        color: #666;
+        color: #94a3b8;
         margin-bottom: 20px;
       }
 
@@ -315,13 +322,14 @@
         padding: 10px 20px;
         border: none;
         border-radius: 8px;
-        background-color: #f0f0f0;
+        background-color: #334155;
+        color: #f8fafc;
         cursor: pointer;
         transition: all 0.3s ease;
       }
 
       .close-button:hover {
-        background-color: #e0e0e0;
+        background-color: #475569;
         transform: translateY(-2px);
       }
 
@@ -362,7 +370,7 @@
       }
 
       .error-modal-content {
-        background-color: white;
+        background-color: #1e293b;
         padding: 30px;
         border-radius: 20px;
         text-align: center;
@@ -382,10 +390,11 @@
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 10px;
+        color: #f8fafc;
       }
 
       .error-modal-description {
-        color: #666;
+        color: #94a3b8;
         margin-bottom: 20px;
       }
 
@@ -394,13 +403,14 @@
         padding: 10px 20px;
         border: none;
         border-radius: 8px;
-        background-color: #f0f0f0;
+        background-color: #334155;
+        color: #f8fafc;
         cursor: pointer;
         transition: all 0.3s ease;
       }
 
       .error-close-button:hover {
-        background-color: #e0e0e0;
+        background-color: #475569;
         transform: translateY(-2px);
       }
 
@@ -498,19 +508,15 @@
         background-color: #444444;
       }
 
-      .send {
-        background-color: #0081ff;
-        color: #ffffff;
-      }
-
       .send.dark {
-        background-color: #0081ff;
+        background-color: #aaaaff;
+        color: #0f172a;
       }
     </style>
   </head>
   <body>
     <div id="links">
-      <a href="https://github.com/p-asta/toss">
+      <a href="https://github.com/DevNergis/Toss">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -532,7 +538,7 @@
     </div>
     <div class="container">
       <div class="header">
-        <span class="title">Asta에게 송금</span>
+        <span class="title">Nergis에게 송금</span>
       </div>
 
       <div class="amount-display">
@@ -599,15 +605,16 @@
         const modal = document.getElementById("qrModal");
         const qrContainer = document.getElementById("qrcode");
         qrContainer.innerHTML = "";
-        document.getElementsByClassName("modal-description")[0].innerHTML =
-          `QR 코드를 스캔하여 모바일에서 ${wonDisplay.innerHTML}을 보내요!`;
+        document.getElementsByClassName(
+          "modal-description"
+        )[0].innerHTML = `QR 코드를 스캔하여 모바일에서 ${wonDisplay.innerHTML}을 보내요!`;
 
         modal.style.display = "flex";
         setTimeout(() => {
           modal.classList.add("show");
         }, 10);
         const currentUrl = new URL(
-          `supertoss://send?bank=${BANK}&accountNo=${ACCOUNT_NO}&amount=${amount}`,
+          `supertoss://send?bank=${BANK}&accountNo=${ACCOUNT_NO}&amount=${amount}`
         );
         currentUrl.searchParams.set("amount", amount);
 
@@ -657,7 +664,7 @@
 
       function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent,
+          navigator.userAgent
         );
       }
 
@@ -785,7 +792,7 @@
 
       function applyUserThemePreference() {
         const prefersDarkScheme = window.matchMedia(
-          "(prefers-color-scheme: dark)",
+          "(prefers-color-scheme: dark)"
         ).matches;
         if (prefersDarkScheme) {
           document.body.classList.add("dark");
